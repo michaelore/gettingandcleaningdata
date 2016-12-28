@@ -1,3 +1,10 @@
+Setup:
+=====
+
+The original data is not included in the repository. You need to either:
+* Copy the data into a folder at the root of this repository named 'UCI HAR DataSet/'
+* Or, edit the 'data_path' variable set at the top of 'run_analysis.R' to have the path to where you put the data.
+
 Requirements:
 ============
 
