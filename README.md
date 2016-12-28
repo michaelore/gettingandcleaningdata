@@ -1,3 +1,18 @@
+Requirements:
+============
+
+1. The submitted data set is tidy.
+  * Each variable is a column.
+  * Each row is an observation.
+  * There is only one table, and it has only one meaning.
+  * All column names are cleanup up to be camelCase with no punctuation.
+2. The Github repo contains the required scripts.
+  * I included my script: 'run_analysis.R'. This produces the data I submitted: 'tidy_data/data_average.txt'.
+3. GitHub contains a code book that modifies and updates the available codebooks with the data to indicate all the variables and summaries calculated, along with units, and any other relevant information.
+  * In 'CodeBook.md', an edited exceprt from the original 'feature_info.txt' describes what the original data meant. The variables in 'tidy_data/data_average.txt' are described.
+4. The README that explains the analysis files is clear and understandable.
+  * The 'Analysis process' at the bottom describes everything 'run_analysis.R' does.
+
 This project includes the following files:
 =========================================
 
