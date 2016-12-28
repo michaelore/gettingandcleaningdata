@@ -1,16 +1,18 @@
 library(dplyr)
 
+data_path <- "UCI\ HAR\ DataSet/"
+
 # Read all data files we'll use
-activity_labels <- read.table("activity_labels.txt")
-features <- read.table("features.txt")
+activity_labels <- read.table(paste0(data_path, "activity_labels.txt"))
+features <- read.table(paste0(data_path, "features.txt"))
 
-subject_test <- read.table("test/subject_test.txt")
-x_test <- read.table("test/X_test.txt")
-y_test <- read.table("test/y_test.txt")
+subject_test <- read.table(paste0(data_path, "test/subject_test.txt"))
+x_test <- read.table(paste0(data_path, "test/X_test.txt"))
+y_test <- read.table(paste0(data_path, "test/y_test.txt"))
 
-subject_train <- read.table("train/subject_train.txt")
-x_train <- read.table("train/X_train.txt")
-y_train <- read.table("train/y_train.txt")
+subject_train <- read.table(paste0(data_path, "train/subject_train.txt"))
+x_train <- read.table(paste0(data_path, "train/X_train.txt"))
+y_train <- read.table(paste0(data_path, "train/y_train.txt"))
 
 # Merge training and test data
 subject <- rbind(subject_test, subject_train)
@@ -43,5 +45,5 @@ data_average <- data %>%
   summarize_(.dots = paste0("mean(",names(data)[-(1:2)],")"))
 
 # Write the data to new files
-write.table(data, "tidy_data/data.txt", row.names = FALSE)
+#write.table(data, "tidy_data/data.txt", row.names = FALSE)
 write.table(data_average, "tidy_data/data_average.txt", row.names = FALSE)
